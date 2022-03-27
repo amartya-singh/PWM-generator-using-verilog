@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/tb_PWM_Generator_Verilog_isim_beh.exe" -prj "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/tb_PWM_Generator_Verilog_beh.prj" "work.tb_PWM_Generator_Verilog" "work.glbl" 

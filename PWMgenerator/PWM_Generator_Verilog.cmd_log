@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/PWM_Generator_Verilog.xst" -ofn "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/PWM_Generator_Verilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "PWM_Generator_Verilog.ngc" PWM_Generator_Verilog.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o PWM_Generator_Verilog_map.ncd PWM_Generator_Verilog.ngd PWM_Generator_Verilog.pcf 
+par -w -intstyle ise -ol high -mt off PWM_Generator_Verilog_map.ncd PWM_Generator_Verilog.ncd PWM_Generator_Verilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM_Generator_Verilog.twx PWM_Generator_Verilog.ncd -o PWM_Generator_Verilog.twr PWM_Generator_Verilog.pcf 
+xst -intstyle ise -ifn "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/PWM_Generator_Verilog.xst" -ofn "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/PWM_Generator_Verilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "PWM_Generator_Verilog.ngc" PWM_Generator_Verilog.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o PWM_Generator_Verilog_map.ncd PWM_Generator_Verilog.ngd PWM_Generator_Verilog.pcf 
+par -w -intstyle ise -ol high -mt off PWM_Generator_Verilog_map.ncd PWM_Generator_Verilog.ncd PWM_Generator_Verilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM_Generator_Verilog.twx PWM_Generator_Verilog.ncd -o PWM_Generator_Verilog.twr PWM_Generator_Verilog.pcf 
+xst -intstyle ise -ifn "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/PWM_Generator_Verilog.xst" -ofn "G:/INTERNSHIP and PROJECT/DSD PROJECT/PWMgenerator/PWM_Generator_Verilog.syr" 

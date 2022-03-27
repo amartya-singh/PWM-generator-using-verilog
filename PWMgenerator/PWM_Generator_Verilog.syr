@@ -1,0 +1,444 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.49 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.49 secs
+ 
+--> Reading design: PWM_Generator_Verilog.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PWM_Generator_Verilog.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PWM_Generator_Verilog"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : PWM_Generator_Verilog
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v" into library work
+Parsing module <PWM_Generator_Verilog>.
+Parsing module <DFF_PWM>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <PWM_Generator_Verilog>.
+WARNING:HDLCompiler:413 - "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v" Line 24: Result of 29-bit expression is truncated to fit in 28-bit target.
+WARNING:HDLCompiler:413 - "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v" Line 33: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <DFF_PWM>.
+WARNING:HDLCompiler:413 - "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v" Line 47: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v" Line 49: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v" Line 54: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v" Line 58: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <PWM_Generator_Verilog>.
+    Related source file is "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v".
+    Found 4-bit register for signal <DUTY_CYCLE>.
+    Found 4-bit register for signal <counter_PWM>.
+    Found 28-bit register for signal <counter_debounce>.
+    Found 28-bit adder for signal <counter_debounce[27]_GND_1_o_add_1_OUT> created at line 24.
+    Found 4-bit adder for signal <DUTY_CYCLE[3]_GND_1_o_add_10_OUT> created at line 47.
+    Found 4-bit adder for signal <counter_PWM[3]_GND_1_o_add_18_OUT> created at line 54.
+    Found 4-bit subtractor for signal <GND_1_o_GND_1_o_sub_14_OUT<3:0>> created at line 49.
+    Found 28-bit comparator greater for signal <n0001> created at line 27
+    Found 4-bit comparator lessequal for signal <n0014> created at line 46
+    Found 4-bit comparator lessequal for signal <n0019> created at line 48
+    Found 4-bit comparator greater for signal <n0027> created at line 55
+    Found 4-bit comparator greater for signal <counter_PWM[3]_DUTY_CYCLE[3]_LessThan_23_o> created at line 58
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+Unit <PWM_Generator_Verilog> synthesized.
+
+Synthesizing Unit <DFF_PWM>.
+    Related source file is "G:\INTERNSHIP and PROJECT\DSD PROJECT\PWMgenerator\PWM_Generator_Verilog.v".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <DFF_PWM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 28-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 4-bit addsub                                          : 1
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 28-bit register                                       : 1
+ 4-bit register                                        : 2
+# Comparators                                          : 5
+ 28-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 2
+ 4-bit comparator lessequal                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <PWM_Generator_Verilog>.
+The following registers are absorbed into counter <counter_PWM>: 1 register on signal <counter_PWM>.
+The following registers are absorbed into counter <counter_debounce>: 1 register on signal <counter_debounce>.
+The following registers are absorbed into counter <DUTY_CYCLE>: 1 register on signal <DUTY_CYCLE>.
+Unit <PWM_Generator_Verilog> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 28-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 5
+ 28-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 2
+ 4-bit comparator lessequal                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <PWM_Generator_Verilog> ...
+WARNING:Xst:1293 - FF/Latch <counter_debounce_27> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_26> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_25> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_24> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_23> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_22> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_21> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_20> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_19> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_18> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_17> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_16> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_15> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_14> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_13> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_12> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_11> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_10> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_9> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_8> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_7> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_6> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_5> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_4> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_3> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_2> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_debounce_1> has a constant value of 0 in block <PWM_Generator_Verilog>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <counter_PWM_0> in Unit <PWM_Generator_Verilog> is equivalent to the following FF/Latch, which will be removed : <counter_debounce_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PWM_Generator_Verilog, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : PWM_Generator_Verilog.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 18
+#      INV                         : 2
+#      LUT2                        : 3
+#      LUT3                        : 2
+#      LUT4                        : 3
+#      LUT5                        : 1
+#      LUT6                        : 6
+#      MUXF7                       : 1
+# FlipFlops/Latches                : 12
+#      FDE                         : 8
+#      FDR                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              12  out of  126800     0%  
+ Number of Slice LUTs:                   17  out of  63400     0%  
+    Number used as Logic:                17  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     21
+   Number with an unused Flip Flop:       9  out of     21    42%  
+   Number with an unused LUT:             4  out of     21    19%  
+   Number of fully used LUT-FF pairs:     8  out of     21    38%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    210     1%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 12    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.951ns (Maximum Frequency: 512.610MHz)
+   Minimum input arrival time before clock: 0.288ns
+   Maximum output required time after clock: 1.709ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.951ns (frequency: 512.610MHz)
+  Total number of paths / destination ports: 112 / 22
+-------------------------------------------------------------------------
+Delay:               1.951ns (Levels of Logic = 2)
+  Source:            PWM_DFF2/Q (FF)
+  Destination:       DUTY_CYCLE_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PWM_DFF2/Q to DUTY_CYCLE_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.361   0.712  PWM_DFF2/Q (PWM_DFF2/Q)
+     LUT6:I0->O            1   0.097   0.295  GND_1_o_DUTY_CYCLE[3]_AND_5_o1 (GND_1_o_DUTY_CYCLE[3]_AND_5_o)
+     LUT6:I5->O            4   0.097   0.293  _n0066_inv (_n0066_inv)
+     FDE:CE                    0.095          DUTY_CYCLE_0
+    ----------------------------------------
+    Total                      1.951ns (0.650ns logic, 1.301ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.288ns (Levels of Logic = 1)
+  Source:            decrease_duty (PAD)
+  Destination:       PWM_DFF3/Q (FF)
+  Destination Clock: clk rising
+
+  Data Path: decrease_duty to PWM_DFF3/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.279  decrease_duty_IBUF (decrease_duty_IBUF)
+     FDE:D                     0.008          PWM_DFF3/Q
+    ----------------------------------------
+    Total                      0.288ns (0.009ns logic, 0.279ns route)
+                                       (3.1% logic, 96.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Offset:              1.709ns (Levels of Logic = 3)
+  Source:            DUTY_CYCLE_1 (FF)
+  Destination:       PWM_OUT (PAD)
+  Source Clock:      clk rising
+
+  Data Path: DUTY_CYCLE_1 to PWM_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.361   0.579  DUTY_CYCLE_1 (DUTY_CYCLE_1)
+     LUT4:I0->O            1   0.097   0.295  PWM_OUT11 (PWM_OUT1)
+     LUT5:I4->O            1   0.097   0.279  PWM_OUT12 (PWM_OUT_OBUF)
+     OBUF:I->O                 0.000          PWM_OUT_OBUF (PWM_OUT)
+    ----------------------------------------
+    Total                      1.709ns (0.555ns logic, 1.154ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.951|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.35 secs
+ 
+--> 
+
+Total memory usage is 4625724 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   33 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

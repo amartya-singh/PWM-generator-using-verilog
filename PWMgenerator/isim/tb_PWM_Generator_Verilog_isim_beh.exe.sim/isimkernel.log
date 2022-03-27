@@ -1,0 +1,29 @@
+Command line:
+   tb_PWM_Generator_Verilog_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57951
+
+Wed Oct 16 14:23:28 2019
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5159.45 Meg
+
+ Total Signals          : 37
+ Total Nets             : 24
+ Total Signal Drivers   : 16
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 26
+ Total Traceable Variables  : 28
+ Total Scalar Nets and Variables : 147
+Total Line Count : 80
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 5002.16 Meg
+
+Wed Oct 16 20:07:26 2019
+
